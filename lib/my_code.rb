@@ -12,11 +12,15 @@ new_array
 end
 
 def reduce(array, sv=nil)
-  i = 0 
-  new = []
-while i < new.length do
-  
-  i += 1
+  if sv
+    sum = sv
+    i = 0
+  else
+    sum = array[0]
+    i = 1
+  end
+  while i < array.length
+  sum = yield(sum, array[i])
 end
 
 end
