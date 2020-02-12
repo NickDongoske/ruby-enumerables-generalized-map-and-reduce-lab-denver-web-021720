@@ -8,7 +8,7 @@ while i < array.length do
   i += 1
 end
 
-new_array
+new
 end
 
 def reduce(array, sv=nil)
